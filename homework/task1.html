@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Задание 6.6.1</title>
+</head>
+
+<body>
+  <script>
+    //Является слово палиндромом или нет.
+    //Палиндром — это слово или выражение, которое читается в обе стороны одинаково.
+
+    const word = prompt('введите слово (или предложение) без пробелов с маленькой буквы: ');
+    let i = word.length - 1;//последний индекс
+    let newWord = '';
+    while (i >= 0)//индекс стремится к 0 тоесть от конца к началу
+    {
+      newWord = newWord + word[i];
+      i--;
+    }
+
+    if (word == newWord)
+    {
+      alert(`Слово (предложение) ${word} является палиндромом`);
+    } else
+    {
+      alert(`Слово  (предложение) ${word} не является палиндромом`);
+    }
+  </script>
+</body>
+
+</html>
