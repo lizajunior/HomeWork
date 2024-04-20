@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Задание 6.6.4</title>
+</head>
+<body>
+  <script>
+    //крестики-нолики
+    const board =[
+    ['X', 'O', 'X'],
+    ['O', 'X', 'O'],
+    ['X', 'O', 'X']
+    ];
+
+    const row = [];
+
+    for(let i = 0; i < 3; i++){
+      row[i] = [];
+      for(let j = 0; j < 3; j++){
+        row[i][j] = board[i][j]; //row получает копию содержимого board
+      }
+    }
+
+    console.log(row);
+
+    let str = '';
+    for(let i = 0; i < row.length; i++){
+      for(let j = 0; j < row[i].length; j++){
+        str +=`${row[i][j]} `; //каждое значение элемента массива row добавляется к строке str чтобы преобразовать значение с строку
+      } 
+      str += "\n";
+    }
+    console.log(str);
+  </script>
+</body>
+</html>
